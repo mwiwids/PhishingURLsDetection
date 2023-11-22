@@ -324,7 +324,7 @@ if urls:
         st.error("This isn't valid URL :thumbsdown:")
     else:
 
-        with open('modelDTC.pkl', 'rb') as file:
+        with open('modelRFC.pkl', 'rb') as file:
             load_model = pickle.load(file)
         
         test_data = URL_Converter(urls)         
