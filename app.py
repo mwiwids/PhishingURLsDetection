@@ -324,6 +324,7 @@ if urls:
         st.error("This isn't valid URL :thumbsdown:")
     else:
         print(pickle.format_version)
+        st.success(pickle.format_version)
 
         with open('modelRFC.pkl', 'rb') as file:
             load_model = pickle.load(file)
