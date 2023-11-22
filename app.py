@@ -323,6 +323,7 @@ if urls:
     if is_valid_url == False:
         st.error("This isn't valid URL :thumbsdown:")
     else:
+        print(pickle.format_version)
 
         with open('modelRFC.pkl', 'rb') as file:
             load_model = pickle.load(file)
