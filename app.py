@@ -323,6 +323,9 @@ if urls:
     if is_valid_url == False:
         st.error("This isn't valid URL :thumbsdown:")
     else:
+        import sklearn
+        st.success(sklearn.__version__)
+        # st.success(pickle.format_version)
         
         load_model = pickle.load(open('modelRFC.pkl', 'rb'))
 
