@@ -323,12 +323,9 @@ if urls:
     if is_valid_url == False:
         st.error("This isn't valid URL :thumbsdown:")
     else:
-        print(pickle.format_version)
-        st.success(pickle.format_version)
-
-        with open('modelRFC.pkl', 'rb') as file:
-            load_model = pickle.load(file)
         
+        load_model = pickle.load(open('modelRFC.pkl', 'rb'))
+
         test_data = URL_Converter(urls)         
         
         prediction = load_model.predict(test_data)
